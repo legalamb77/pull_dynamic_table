@@ -1,7 +1,6 @@
 import pandas as pd
 import certifi
 import time
-from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import sys
@@ -13,7 +12,6 @@ if __name__=='__main__':
     browser.get(url)
     time.sleep(3)
     html = browser.page_source
-    soup = BeautifulSoup(html, "lxml")
 
     no_of_pagedowns = int(sys.argv[1])
 
